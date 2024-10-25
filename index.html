@@ -11,26 +11,25 @@
         <div class="calculator">
             <input type="number" id="field">
             <div class="number">
-                <button claas="but one" onclick="one(1)"><i class="fa-solid fa-1"></i></button>
-                <button claas="but two" onclick="one(2)"><i class="fa-solid fa-2"></i></button>
-                <button claas="but there" onclick="one(3)"><i class="fa-solid fa-3"></i></button>
-                <button claas="but four" onclick="one(4)"><i class="fa-solid fa-4"></i></button>
-                <button claas="but five" onclick="one(5)"><i class="fa-solid fa-5"></i></button>
-                <button claas="but six" onclick="one(6)"><i class="fa-solid fa-6"></i></button>
-                <button claas="but seven" onclick="one(7)"><i class="fa-solid fa-7"></i></button>
-                <button claas="but eight" onclick="one(8)"><i class="fa-solid fa-8"></i></button>
-                <button claas="but nine" onclick="one(9)"><i class="fa-solid fa-9"></i></button>
-                <button claas="but zero" onclick="one(0)"><i class="fa-solid fa-0"></i></button>
-                <button id="del" onclick="delFun()"><i class="fa-solid fa-delete-left"></i></button>
-                <button id="delA" onclick="delAFun()"><i class="fa-solid fa-trash"></i></button>
-
+                <button onclick="one(1)"><i class="fa-solid fa-1"></i></button>
+                <button onclick="one(2)"><i class="fa-solid fa-2"></i></button>
+                <button onclick="one(3)"><i class="fa-solid fa-3"></i></button>
+                <button onclick="one(4)"><i class="fa-solid fa-4"></i></button>
+                <button onclick="one(5)"><i class="fa-solid fa-5"></i></button>
+                <button onclick="one(6)"><i class="fa-solid fa-6"></i></button>
+                <button onclick="one(7)"><i class="fa-solid fa-7"></i></button>
+                <button onclick="one(8)"><i class="fa-solid fa-8"></i></button>
+                <button onclick="one(9)"><i class="fa-solid fa-9"></i></button>
+                <button onclick="one(0)"><i class="fa-solid fa-0"></i></button>
+                <button onclick="operaD()"><i class="fa-solid fa-delete-left"></i></button>
+                <button onclick="operaDA()"><i class="fa-solid fa-trash"></i></button>
             </div>
             <div class="math">
-                <button id="plus" onclick="plusFun()"><i class="fa-solid fa-plus"></i></button>
-                <button id="minus" onclick="minusFun()"><i class="fa-solid fa-minus"></i></button>
-                <button id="multyply" onclick="multyplyFun()"><i class="fa-solid fa-xmark"></i></button>
-                <button id="divide" onclick="divideFun()"><i class="fa-solid fa-divide"></i></button>
-                <button id="equals" onclick="equalsFun()"><i class="fa-solid fa-equals"></i></button>
+                <button onclick="opera('+')"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="opera('-')"><i class="fa-solid fa-minus"></i></button>
+                <button onclick="opera('*')"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="opera('/')"><i class="fa-solid fa-divide"></i></button>
+                <button id="equals" onclick="equal()"><i class="fa-solid fa-equals"></i></button>
             </div>
         </div>
         <script src="js/main.js"></script>
