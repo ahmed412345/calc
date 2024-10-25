@@ -1,49 +1,34 @@
 let field = document.getElementById('field');
-function one(a) {
+function one(a){
     field.value += a;
 }
-let plus = document.getElementById('plus');
-let minus = document.getElementById('minus');
-let multyply = document.getElementById('multyply');
-let divide = document.getElementById('divide');
-let equals = document.getElementById('equals');
-let del = document.getElementById('del');
-let delA = document.getElementById('delA');
-function plusFun() {
-    const num1 = Number(field.value);
+let num1 =0;
+let num2 =0;
+let ask =0;
+function opera(b){
+    num1 = field.value;
     field.value = '';
-    window.equalsFun = function() {
-        const num2 = Number(field.value);
-        field.value = num1 + num2;
+    ask = b;
+}
+function equal(){
+    num2 = field.value;
+    if(ask == '+'){
+        field.value = Number(num1) + Number(num2);
+    }else if(ask == '-'){
+        field.value = Number(num1) - Number(num2);
+    }else if(ask == '*'){
+        field.value = Number(num1) * Number(num2);
+    }else if(ask == '/'){
+        if(num2 == 0){
+            alert('can not divide in zero');
+        }else{
+            field.value = Number(num1) / Number(num2);
+        }
     }
 }
-function minusFun() {
-    const num1 = Number(field.value);
-    field.value = '';
-    window.equalsFun = function() {
-        const num2 = Number(field.value);
-        field.value = num1 - num2;
-    }
+function operaD(){
+    field.value = field.value.slice(0,-1);
 }
-function multyplyFun() {
-    const num1 = Number(field.value);
-    field.value = '';
-    window.equalsFun = function() {
-        const num2 = Number(field.value);
-        field.value = num1 * num2;
-    }
-}
-function divideFun() {
-    const num1 = Number(field.value);
-    field.value = '';
-    window.equalsFun = function() {
-        const num2 = Number(field.value);
-        field.value = num1 / num2;
-    }
-}
-function delFun(){
-    field.value = field.value.slice(0, -1);
-}
-function delAFun(){
+function operaDA(){
     field.value = '';
 }
