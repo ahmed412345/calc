@@ -15,8 +15,10 @@ function time(){
         field.value = '';
     },500)
 }
+let math;
 equ.onclick = function(){
-field.value = field.value.replace(/÷/g,'/').replace(/×/g,'*');
+    math = field.value
+    field.value = field.value.replace(/÷/g,'/').replace(/×/g,'*');
     if(!sure.test(field.value)){
         field.value = 'please write only number';
         time();
@@ -26,4 +28,7 @@ field.value = field.value.replace(/÷/g,'/').replace(/×/g,'*');
     }else{
         field.value = eval(field.value);
     }
+}
+function undo(){
+    field.value = math;
 }
