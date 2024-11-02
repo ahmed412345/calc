@@ -12,16 +12,16 @@ let equ = document.getElementById('equals')
 let sure = /^[0-9+\-*/.]+$/;
 function time(){
     setTimeout(function(){
-        field.value = ''
+        field.value = '';
     },500)
 }
 equ.onclick = function(){
-    field.value = field.value.replace('÷','/').replace('×','*')
+    field.value = field.value.replace('÷','/').replace('×','*');
     if(!sure.test(field.value)){
-        field.value = 'please write only number'
+        field.value = 'please write only number';
         time();
     }else if(eval(field.value) == 'Infinity' || isNaN(eval(field.value))){
-        field.value = 'can not diven in zero'
+        field.value = 'can not diven in zero';
         time();
     }else{
         field.value = eval(field.value);
