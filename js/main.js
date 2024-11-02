@@ -20,7 +20,7 @@ equ.onclick = function(){
     if(!sure.test(field.value)){
         field.value = 'please write only number'
         time();
-    }else if(eval(field.value) == 'Infinity'){
+    }else if(eval(field.value) == 'Infinity' || isNaN(eval(field.value))){
         field.value = 'can not diven in zero'
         time();
     }else{
